@@ -15,18 +15,11 @@ export const Footer: React.FC = () => {
           
           {/* Logo Brand */}
           <div className="flex items-center gap-3">
-            <img
-              src="/assets/logo_marks_systems.svg"
-              alt="Marks Systems Icon"
-              style={{ height: "36px", width: "36px", verticalAlign: "middle" }}
-              className="rounded-xl shadow-md shrink-0"
-            />
             <div>
               <span className="font-extrabold text-white text-base block flex items-center gap-1.5">
                 {PERSONAL_INFO.name}
               </span>
-              <span className="text-xs text-blue-400 font-semibold block flex items-center gap-1">
-                <img src="/assets/logo_marks_systems.svg" alt="Marks Systems Icon" style={{ height: "16px", verticalAlign: "middle", marginRight: "2px" }} className="inline-block rounded-sm" />
+              <span className="text-xs text-blue-400 font-semibold block">
                 CEO {PERSONAL_INFO.company} • Passo Fundo / RS
               </span>
             </div>

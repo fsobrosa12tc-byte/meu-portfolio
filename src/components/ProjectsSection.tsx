@@ -36,9 +36,6 @@ export const ProjectsSection: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
                   <div className="flex items-center gap-2">
                     <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 flex items-center gap-1.5">
-                      {project.company === 'Marks Systems' && (
-                        <img src="/assets/logo_marks_systems.svg" alt="Marks Systems Icon" style={{ height: "16px", width: "16px", verticalAlign: "middle" }} className="rounded-sm shrink-0" />
-                      )}
                       <span>{project.company || 'Marks Systems'}</span>
                     </span>
                     <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">

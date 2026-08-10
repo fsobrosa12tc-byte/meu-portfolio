@@ -89,8 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
                 CEO
               </span>
             </div>
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1 mt-0.5">
-              <img src="/assets/logo_marks_systems.svg" alt="Marks Systems Icon" style={{ height: "16px", verticalAlign: "middle" }} className="inline-block rounded-sm shrink-0" />
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center mt-0.5">
               <span>Marks Systems</span>
             </span>
           </div>

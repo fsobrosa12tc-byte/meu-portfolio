@@ -166,7 +166,6 @@ export const Hero: React.FC = () => {
                   href="#projetos"
                   className="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 flex items-center gap-1.5"
                 >
-                  <img src="/assets/logo_marks_systems.svg" alt="Marks Systems Icon" style={{ height: "22px", verticalAlign: "middle", marginRight: "4px" }} className="rounded shrink-0 inline-block" />
                   <span>Marks Systems</span>
                   <ExternalLink className="w-3 h-3 ml-0.5" />
                 </a>
