@@ -1,14 +1,558 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio - Antônio Marques</title>
-    <link rel="icon" type="image/png" href="https://github.com/fsobrosa12tc-byte.png">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marks AI | Engenharia de Software & Soluções em Inteligência Artificial</title>
+  <meta name="description" content="Marks AI — Engenharia de software de alta disponibilidade, arquitetura multi-tenant escalável e agentes de inteligência artificial aplicados a processos reais de negócio.">
+  <meta name="keywords" content="Marks AI, Engenharia de Software, Inteligência Artificial, Micro-SaaS, Integra CRVA, Finova AI, Desenvolvimento Web, Passo Fundo">
+  <meta name="author" content="Marks AI Tecnologia e Engenharia de Software Ltda">
 
+  <!-- Open Graph / Meta Compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marks AI | Engenharia de Software & Soluções em Inteligência Artificial">
+  <meta property="og:description" content="Unimos engenharia de software de alta disponibilidade com IA aplicada a processos de negócio reais.">
+  <meta property="og:image" content="./assets/logo-marks-ai.jpg">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/jpeg" href="./assets/icon-marks-ai.jpg">
+
+  <!-- Fontes Oficiais: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- SDK do EmailJS via CDN (Inicialização Obrigatória no Head) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("i39xYKUX07hgrGNx5");
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR FIXA (GLASSMORPHYSM) -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#" class="brand-link" aria-label="Marks AI Início">
+        <img src="./assets/icon-marks-ai.jpg" alt="Marks AI Ícone" class="brand-icon">
+        <span class="brand-text">MARKS <span class="brand-ai">AI</span></span>
+      </a>
+
+      <!-- Menu de Navegação Desktop -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#pilares" class="nav-item">Pilares</a></li>
+        <li><a href="#ecossistema" class="nav-item">Ecossistema SaaS</a></li>
+        <li><a href="#lista-projetos" class="nav-item">Open-Source</a></li>
+        <li><a href="#sobre" class="nav-item">Fundador</a></li>
+        <li><a href="#contato" class="nav-item">Contato</a></li>
+      </ul>
+
+      <!-- Botão CTA Navbar -->
+      <div class="nav-action">
+        <a href="#contato" class="btn-cta-nav">Solicitar Diagnóstico →</a>
+        <!-- Botão Mobile Hamburger -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (ARQUITETURA DE MARCA HÍBRIDA) -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            AI Software House & Estúdio de Micro-SaaS • Passo Fundo, RS
+          </div>
+
+          <h1 class="hero-title">
+            Marks AI — <span class="text-gradient-cyan">Engenharia de Software</span> & Soluções em <span class="text-gradient-emerald">Inteligência Artificial</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Unimos engenharia de software de alta disponibilidade (arquitetura multi-tenant, bancos relacionais seguros e APIs) com inteligência artificial aplicada a processos de negócio reais.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contato" class="btn-primary">
+              Agendar Diagnóstico Técnico <span class="btn-arrow">→</span>
+            </a>
+            <a href="#ecossistema" class="btn-secondary">
+              Conhecer Ecossistema SaaS
+            </a>
+          </div>
+
+          <!-- Métricas e Autoridade Rápida -->
+          <div class="hero-quick-stats">
+            <div class="quick-stat-item">
+              <span class="stat-number">+10 Anos</span>
+              <span class="stat-label">Vivência Operacional Crítica</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Arquitetura Segura & RLS</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="quick-stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Agentes Autônomos de IA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card Visual da Hero com Logotipo Oficial -->
+        <div class="hero-visual">
+          <div class="hero-card-glass">
+            <div class="card-glow-bg"></div>
+            <div class="logo-wrapper">
+              <img src="./assets/logo-marks-ai.jpg" alt="Logotipo Oficial Marks AI" class="hero-main-logo">
+            </div>
+            <div class="hero-chips-container">
+              <div class="chips-title">STACK & ARQUITETURA DE ENGENHARIA</div>
+              <div class="chips-grid">
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">React</span>
+                <span class="tech-chip">TypeScript</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">Supabase RLS</span>
+                <span class="tech-chip">Agentes IA WhatsApp</span>
+                <span class="tech-chip">APIs REST / Webhooks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1: PILARES DE AUTORIDADE E DIFERENCIAÇÃO -->
+    <section class="section-container" id="pilares">
+      <div class="section-header">
+        <span class="section-tag section-tag-cyan">Diferenciais Técnicos</span>
+        <h2 class="section-title">Pilares de Autoridade e Engenharia</h2>
+        <p class="section-subtitle">
+          Criamos soluções de tecnologia corporativa aliando rigor arquitetural à vanguarda da inteligência artificial generativa.
+        </p>
+      </div>
+
+      <div class="pilares-grid">
+        <!-- Pilar 1: Engenharia de Software -->
+        <article class="pilar-card pilar-emerald">
+          <div class="pilar-icon-wrapper icon-emerald">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span class="pilar-badge badge-emerald">Arquitetura Robusta</span>
+          <h3 class="pilar-title">Engenharia de Software de Verdade</h3>
+          <p class="pilar-text">
+            Desenvolvimento full-stack com arquitetura escalável (Next.js, React, TypeScript, PostgreSQL/Supabase com Row Level Security), garantindo segurança de dados, controle de acesso por perfil e alta disponibilidade.
+          </p>
+        </article>
+
+        <!-- Pilar 2: Inteligência Artificial -->
+        <article class="pilar-card pilar-cyan">
+          <div class="pilar-icon-wrapper icon-cyan">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"></path>
+              <path d="M16 14v1a4 4 0 0 1-8 0v-1"></path>
+              <line x1="12" y1="19" x2="12" y2="22"></line>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
+          <span class="pilar-badge badge-cyan">IA Prática & Rentável</span>
+          <h3 class="pilar-title">Inteligência Artificial Aplicada a Resultados</h3>
+          <p class="pilar-text">
+            Agentes conversacionais integrados ao WhatsApp, processamento de linguagem natural, leitura automatizada de comprovantes e documentos, e assistentes operacionais treinados para regras específicas de cada negócio.
+          </p>
+        </article>
+
+        <!-- Pilar 3: Visão de Produto -->
+        <article class="pilar-card pilar-amber">
+          <div class="pilar-icon-wrapper icon-amber">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <span class="pilar-badge badge-amber">Bagagem Operacional</span>
+          <h3 class="pilar-title">Visão de Produto Orientada a Problemas Reais</h3>
+          <p class="pilar-text">
+            Experiência prática de mais de uma década em operações reguladas e atendimento ao público (CRVA), traduzida em interfaces intuitivas, auditáveis e livres de gargalos operacionais.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: ECOSSISTEMA DE PRODUTOS E SOLUÇÕES -->
+    <section class="section-container" id="ecossistema">
+      <div class="section-header">
+        <span class="section-tag section-tag-emerald">Portfólio Ativo</span>
+        <h2 class="section-title">Ecossistema de Produtos & Soluções</h2>
+        <p class="section-subtitle">
+          Sistemas e micro-SaaS projetados e desenvolvidos pela Marks AI para resolver gargalos reais de gestão e atendimento.
+        </p>
+      </div>
+
+      <div class="ecossistema-grid">
+        <!-- Produto 1: INTEGRA CRVA -->
+        <article class="produto-card">
+          <div class="produto-top">
+            <div class="produto-header-meta">
+              <span class="business-badge badge-b2b">SaaS B2B Especializado</span>
+              <span class="produto-status status-active">Em Produção</span>
+            </div>
+            <h3 class="produto-name">INTEGRA CRVA</h3>
+            <p class="produto-sub">PDV, CRM & Gestão de Pátio</p>
+          </div>
+          <p class="produto-description">
+            Plataforma completa para Centros de Registro de Veículos Automotores. Frente de caixa, conta-corrente de despachantes, recibos com validação criptográfica SHA-256, app mobile para pátio de vistoria e atendimento automatizado via WhatsApp (assistente virtual Antonella).
+          </p>
+          <div class="produto-highlights">
+            <span class="pill-feat">Validação SHA-256</span>
+            <span class="pill-feat">App de Pátio</span>
+            <span class="pill-feat">WhatsApp Antonella</span>
+          </div>
+          <div class="produto-footer">
+            <div class="brand-signature">
+              <img src="./assets/icon-marks-ai.jpg" alt="Marks AI" class="signature-icon">
+              <span>Desenvolvido por <strong>Marks AI</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 2: Finova AI -->
+        <article class="produto-card">
+          <div class="produto-top">
+            <div class="produto-header-meta">
+              <span class="business-badge badge-b2c">Micro-SaaS B2C</span>
+              <span class="produto-status status-active">Em Produção</span>
+            </div>
+            <h3 class="produto-name">Finova AI</h3>
+            <p class="produto-sub">Gestor Financeiro Pessoal Inteligente</p>
+          </div>
+          <p class="produto-description">
+            Gestor financeiro pessoal inteligente integrado ao WhatsApp. Registra receitas e despesas por texto, áudio ou foto de comprovante, importa extratos em PDF, conta com o "Modo Anti-Ilusão" para proteção de saldo e gera diagnósticos financeiros via IA.
+          </p>
+          <div class="produto-highlights">
+            <span class="pill-feat">OCR de Comprovantes</span>
+            <span class="pill-feat">Modo Anti-Ilusão</span>
+            <span class="pill-feat">Áudio & Texto no WhatsApp</span>
+          </div>
+          <div class="produto-footer">
+            <div class="brand-signature">
+              <img src="./assets/icon-marks-ai.jpg" alt="Marks AI" class="signature-icon">
+              <span>Desenvolvido por <strong>Marks AI</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 3: Nexus OS -->
+        <article class="produto-card">
+          <div class="produto-top">
+            <div class="produto-header-meta">
+              <span class="business-badge badge-tenant">SaaS Multi-Tenant</span>
+              <span class="produto-status status-active">Em Produção</span>
+            </div>
+            <h3 class="produto-name">Nexus OS</h3>
+            <p class="produto-sub">Gestão Corporativa de Ordens de Serviço</p>
+          </div>
+          <p class="produto-description">
+            Sistema corporativo para gestão de ordens de serviço, controle de estoque técnico, histórico de clientes e acompanhamento de status em tempo real para assistências e prestadores de serviço.
+          </p>
+          <div class="produto-highlights">
+            <span class="pill-feat">Ordens de Serviço</span>
+            <span class="pill-feat">Estoque Técnico</span>
+            <span class="pill-feat">Multi-Tenant Isolado</span>
+          </div>
+          <div class="produto-footer">
+            <div class="brand-signature">
+              <img src="./assets/icon-marks-ai.jpg" alt="Marks AI" class="signature-icon">
+              <span>Desenvolvido por <strong>Marks AI</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 4: BarberFlow AI -->
+        <article class="produto-card">
+          <div class="produto-top">
+            <div class="produto-header-meta">
+              <span class="business-badge badge-vertical">SaaS Vertical</span>
+              <span class="produto-status status-active">Em Produção</span>
+            </div>
+            <h3 class="produto-name">BarberFlow AI</h3>
+            <p class="produto-sub">Agendamento & Retenção com Agente de IA</p>
+          </div>
+          <p class="produto-description">
+            Plataforma de agendamento inteligente para barbearias e estética masculina com triagem, confirmação e lembretes automatizados via inteligência artificial no WhatsApp.
+          </p>
+          <div class="produto-highlights">
+            <span class="pill-feat">Agenda Automatizada</span>
+            <span class="pill-feat">Lembretes WhatsApp</span>
+            <span class="pill-feat">Zero No-Show</span>
+          </div>
+          <div class="produto-footer">
+            <div class="brand-signature">
+              <img src="./assets/icon-marks-ai.jpg" alt="Marks AI" class="signature-icon">
+              <span>Desenvolvido por <strong>Marks AI</strong></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Produto 5: AutoLeads AI & Soluções Customizadas -->
+        <article class="produto-card produto-card-destaque">
+          <div class="produto-top">
+            <div class="produto-header-meta">
+              <span class="business-badge badge-custom">B2B / Projetos Customizados</span>
+              <span class="produto-status status-custom">Sob Demanda</span>
+            </div>
+            <h3 class="produto-name">AutoLeads AI & Sistemas Sob Medida</h3>
+            <p class="produto-sub">CRM Inteligente & Desenvolvimento Exclusivo</p>
+          </div>
+          <p class="produto-description">
+            CRM comercial com IA para concessionárias e lojas de veículos, além de desenvolvimento sob demanda de sistemas web, plataformas de afiliados e automações corporativas integradas.
+          </p>
+          <div class="produto-highlights">
+            <span class="pill-feat">Qualificação Automática</span>
+            <span class="pill-feat">Sistemas Corporativos</span>
+            <span class="pill-feat">Integração ERP/CRM</span>
+          </div>
+          <div class="produto-footer">
+            <div class="brand-signature">
+              <img src="./assets/icon-marks-ai.jpg" alt="Marks AI" class="signature-icon">
+              <span>Desenvolvido por <strong>Marks AI</strong></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: REPOSITÓRIOS OPEN-SOURCE & ENGENHARIA NO GITHUB (RF-01 E RF-02) -->
+    <section class="section-container" id="projetos-github">
+      <div class="section-header">
+        <span class="section-tag section-tag-cyan">Open-Source & Labs</span>
+        <h2 class="section-title">Código Aberto & Laboratório de Engenharia (GitHub API em Tempo Real)</h2>
+        <p class="section-subtitle">
+          Sincronização em tempo real via API pública do GitHub, refletindo nossos repositórios, bibliotecas e protótipos de engenharia.
+        </p>
+      </div>
+
+      <!-- Container estrito onde os repositórios são injetados pelo app.js (RF-02) -->
+      <div id="lista-projetos" class="repos-grid"></div>
+    </section>
+
+    <!-- SEÇÃO 4: FUNDADOR & LIDERANÇA TÉCNICA -->
+    <section class="section-container" id="sobre">
+      <div class="founder-card-glass">
+        <div class="founder-avatar-wrapper">
+          <!-- Foto dinâmica oficial via GitHub do Fundador (RF-01) -->
+          <img src="https://github.com/fsobrosa12tc-byte.png" alt="Antônio Fagner Sobrosa Marques" class="founder-photo">
+          <div class="founder-badge-role">Fundador & Arquiteto</div>
+        </div>
+
+        <div class="founder-info">
+          <span class="section-tag section-tag-emerald">Liderança Técnica</span>
+          <h2 class="founder-name">Antônio Fagner Sobrosa Marques</h2>
+          <p class="founder-role">Fundador & Arquiteto de Software • Passo Fundo, RS</p>
+
+          <div class="founder-bio">
+            <p>
+              Com mais de uma década de vivência prática em operações críticas, rotinas regulatórias e atendimento ao público credenciado pelo DETRAN-RS/CRVA, Antônio uniu rigor procedimental à engenharia de software full-stack e arquitetura de dados relacional.
+            </p>
+            <p>
+              Graduando em Análise e Desenvolvimento de Sistemas pelo Senac RS, liderou a concepção de sistemas transacionais e a fundação da <strong>Marks AI</strong>, arquitetando ecossistemas multi-tenant com segurança a nível de linha (PostgreSQL/Supabase RLS), integrações de pagamento criptografadas e inteligência artificial operacional integrada ao WhatsApp.
+            </p>
+          </div>
+
+          <!-- Tags de Competências Chave -->
+          <div class="founder-skills-grid">
+            <span class="skill-tag">Next.js & React</span>
+            <span class="skill-tag">TypeScript Vanilla</span>
+            <span class="skill-tag">PostgreSQL & Supabase RLS</span>
+            <span class="skill-tag">Arquitetura Multi-Tenant</span>
+            <span class="skill-tag">Agentes de IA Generativa</span>
+            <span class="skill-tag">Segurança Criptográfica SHA-256</span>
+          </div>
+
+          <!-- Links de Perfil -->
+          <div class="founder-socials">
+            <a href="https://github.com/fsobrosa12tc-byte" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              GitHub Perfil
+            </a>
+            <a href="https://www.linkedin.com/in/fagner-sobrosa-088765215" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: FORMULÁRIO DE DIAGNÓSTICO & CONTATO DIRETO (RF-03 E RF-04) -->
+    <section class="section-container" id="contato">
+      <div class="section-header">
+        <span class="section-tag section-tag-cyan">Conecte-se Conosco</span>
+        <h2 class="section-title">Diagnóstico Técnico & Parcerias Estratégicas</h2>
+        <p class="section-subtitle">
+          Conte-nos sobre os desafios do seu negócio ou a oportunidade de produto que deseja acelerar.
+        </p>
+      </div>
+
+      <div class="contato-grid">
+        <!-- Coluna de Informações Corporativas -->
+        <div class="contato-info-card">
+          <h3 class="info-card-title">Canais Oficiais Marks AI</h3>
+          <p class="info-card-desc">
+            Atendimento direto com a diretoria técnica e comercial para estruturação de projetos, parcerias e implantação dos nossos SaaS.
+          </p>
+
+          <div class="contato-links-list">
+            <div class="contato-link-item">
+              <span class="link-label">Portal Oficial:</span>
+              <a href="https://marksai.com.br" target="_blank" rel="noopener noreferrer" class="link-value">marksai.com.br</a>
+            </div>
+
+            <div class="contato-link-item">
+              <span class="link-label">Atendimento Geral:</span>
+              <a href="mailto:contato@marksai.com.br" class="link-value">contato@marksai.com.br</a>
+            </div>
+
+            <div class="contato-link-item">
+              <span class="link-label">Projetos & Parcerias:</span>
+              <a href="mailto:comercial@marksai.com.br" class="link-value">comercial@marksai.com.br</a>
+            </div>
+
+            <div class="contato-link-item">
+              <span class="link-label">Arquiteto Fundador:</span>
+              <a href="mailto:antonio@marksai.com.br" class="link-value">antonio@marksai.com.br</a>
+            </div>
+
+            <div class="contato-link-item">
+              <span class="link-label">Redes & Comunidade:</span>
+              <span class="link-value">@marksai</span>
+            </div>
+
+            <div class="contato-link-item">
+              <span class="link-label">Sede Técnica:</span>
+              <span class="link-value">Passo Fundo — RS, Brasil</span>
+            </div>
+          </div>
+
+          <div class="sla-badge">
+            <span class="sla-icon">⚡</span>
+            <span>Retorno de análise técnica em até <strong>24 horas úteis</strong></span>
+          </div>
+        </div>
+
+        <!-- Formulário EmailJS (RF-03 e RF-04) -->
+        <div class="contato-form-wrapper">
+          <form id="meu-formulario" class="glass-form">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome Completo / Empresa *</label>
+              <input type="text" id="nome" name="user_name" class="form-input" placeholder="Ex: Roberto Silva / AutoCar Multimarcas" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail Corporativo de Contato *</label>
+              <input type="email" id="email" name="user_email" class="form-input" placeholder="seu.email@empresa.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="interesse" class="form-label">Escopo / Interesse Principal</label>
+              <select id="interesse" name="interest" class="form-select">
+                <option value="SaaS Próprio (Integra CRVA / Finova AI)">SaaS Próprio (Integra CRVA / Finova AI)</option>
+                <option value="Agente de IA & Automação WhatsApp">Agente de IA & Automação WhatsApp</option>
+                <option value="Sistema Web Sob Medida">Sistema Web Sob Medida</option>
+                <option value="Recrutamento / Tech Lead / Consultoria">Recrutamento / Tech Lead / Consultoria</option>
+                <option value="Outro Desafio Operacional">Outro Desafio Operacional</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Mensagem / Desafio Operacional *</label>
+              <textarea id="mensagem" name="message" rows="5" class="form-textarea" placeholder="Descreva brevemente o gargalo operacional ou o projeto que deseja estruturar..." required></textarea>
+            </div>
+
+            <button type="submit" id="btn-enviar" class="btn-submit">
+              Enviar Solicitação via EmailJS <span class="btn-arrow">→</span>
+            </button>
+
+            <!-- Feedback Visual em Tempo Real (RF-04) -->
+            <div id="status-envio" class="status-envio-area" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL OFICIAL MARKS AI -->
+  <footer class="footer-corporate">
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <img src="./assets/logo-marks-ai.jpg" alt="Marks AI Logo" class="footer-logo">
+        </div>
+        <p class="footer-tagline">
+          Engenharia de Software & Soluções em Inteligência Artificial
+        </p>
+        <p class="footer-company-legal">
+          Marks AI Tecnologia e Engenharia de Software Ltda • Passo Fundo, RS
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-heading">Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#pilares">Pilares de Autoridade</a></li>
+          <li><a href="#ecossistema">Ecossistema SaaS</a></li>
+          <li><a href="#lista-projetos">Repositórios Open-Source</a></li>
+          <li><a href="#sobre">Liderança Técnica</a></li>
+          <li><a href="#contato">Solicitar Diagnóstico</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-solutions-col">
+        <h4 class="footer-heading">Soluções Ativas</h4>
+        <ul class="footer-links">
+          <li><span>INTEGRA CRVA (PDV & CRM)</span></li>
+          <li><span>Finova AI (WhatsApp)</span></li>
+          <li><span>Nexus OS (Ordens de Serviço)</span></li>
+          <li><span>BarberFlow AI</span></li>
+          <li><span>AutoLeads AI</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2026 Marks AI. Todos os direitos reservados.
+      </p>
+      <div class="footer-social-links">
+        <a href="https://github.com/fsobrosa12tc-byte" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/fagner-sobrosa-088765215" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:contato@marksai.com.br" aria-label="E-mail">contato@marksai.com.br</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lógica JavaScript Vanilla -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
